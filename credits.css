@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #262626;
+    font-family: "Helvetica", sans-serif;
+}
+#site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5vh 3vw;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+.site-logo {
+    height: 6vh;
+    width: auto;
+}
+#main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2vw;
+    margin: 0;
+    padding: 0;
+}
+#main-nav ul li a {
+    text-decoration: none;
+    color: #262626;
+    font-size: 1rem;
+    font-weight: 500;
+}
+#main-nav ul li a:hover {
+    color: #e7c000;
+}
+.credits-page {
+    max-width: 1200px;
+    margin: 6rem auto;
+    padding: 0 1rem;
+    color: #262626;
+}
+.credits-hero p {
+    margin-bottom: 6rem;
+    font-family: "Georgia", serif;
+    font-size: 2.3rem;
+    font-weight: 300;
+    line-height: 1;
+}
+.credits-hero p:first-of-type {
+    margin-top: 20vh;
+}
+.section-divider {
+    margin-top: 6rem;
+    border-top: 0.1rem solid #262626;
+    width: 100%;
+    margin: 0 auto 2rem auto; 
+}
+.info-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem; 
+    margin-bottom: 6rem;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem; 
+}
+.info-section p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-size: 0.95rem;
+}
+.column:first-child p {
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+#site-footer {
+    padding: 3rem 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #101010;
+}
+@media (max-width: 900px) {
+    .info-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+@media (max-width: 600px) {
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero p {
+        font-size: 1.6rem;
+    }
+}

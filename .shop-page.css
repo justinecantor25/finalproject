@@ -1,0 +1,132 @@
+/* Shop Page */
+.shop-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.shop-title {
+    font-family: "Georgia", serif;
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #262626;
+    padding-bottom: 0.5rem;
+}
+
+/* Grid layout */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Individual shop items */
+.shop-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    background-color: #fff;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.shop-item:hover img {
+    transform: scale(1.05);
+}
+
+.shop-item h1 {
+    font-family: "Georgia", serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.shop-item h2.issue-title {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.shop-item p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.shop-item a {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #262626;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.shop-item a:hover {
+    color: #e7c000;
+    border-bottom: 1px solid #e7c000;
+}
+
+/* Pagination */
+.shop-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.shop-pagination a {
+    font-family: "Helvetica", sans-serif;
+    text-decoration: none;
+    color: #262626;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.shop-pagination a.active {
+    background-color: #262626;
+    color: #fff;
+    border-color: #262626;
+}
+
+.shop-pagination a:hover:not(.active) {
+    color: #e7c000;
+    border-color: #e7c000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .shop-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .shop-page {
+        padding: 2rem 1rem;
+    }
+
+    .shop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-title {
+        font-size: 2rem;
+    }
+}

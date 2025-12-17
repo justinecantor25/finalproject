@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica", serif;
+    color: #262626 ;
+    background-color: #f2f2f2;
+    line-height: 1.6;
+}
+.hero-image {
+    width: 80%;      
+    max-width: 420px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+}
+{
+    text-decoration: none;
+    color: #111;
+}
+#site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1.5vh 3vw;
+    z-index: 1000;
+    transition: border 0.3s ease, background 0.3s ease;
+}
+#main-nav {
+    position: static; 
+    z-index: 2000;
+}
+#main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2vw;
+    margin: 0;
+    padding: 0;
+}
+#main-nav ul li a {
+    text-decoration: none;
+    color: #262626;
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+#main-nav ul li a:hover {
+    color: #e7c000;
+}
+.site-logo {
+    height: 6vh;
+    width: auto;
+}
+.hero-issue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 3rem 0;
+    gap: 1.5rem; 
+}
+.issue-title {
+    font-family: "Georgia", serif; 
+    font-size: 3.0rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+.issue-title span {
+    display: block;
+}
+.read-more {
+    font-size: 0.60rem;             
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;       
+    color: #101010;       
+    border-bottom: 1px solid #101010;
+    padding-bottom: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.read-more:hover {
+    color: #e7c000;
+    border-bottom-color: #e7c000;
+}
+.hero-image {
+    width: 420px;
+    max-width: 90%;
+}
+.sub-image {
+    width: 100%;
+    margin: 2rem 0;
+}
+.featured-articles {
+    padding-left: 0.5in;
+    padding-right: 0.5in; 
+}
+.featured-articles h2 {
+    font-size: 2.3rem;
+    font-family: "Georgia", serif;
+    font-weight: 300;
+    display: block; 
+    border-bottom: 0.1rem solid #262626;
+    padding-top: 1.5rem;  
+    padding-bottom: 0.8rem; 
+    margin-bottom: 2rem; 
+    text-align: left; 
+}
+.articles-scroll {
+    display: flex;
+    gap: 1.5rem;  
+    overflow-x: auto;  
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2rem;
+    scroll-behavior: smooth;
+}
+.article-card:hover img {
+    transform: scale(1.05);
+}
+.article-card {
+    min-width: 360px; 
+    max-width: 360px;
+    padding: 0; 
+}
+.article-image {
+    width: 100%;
+    aspect-ratio: 7 / 8; 
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.04);
+}
+.article-card h3 {
+    font-size: .9rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.1; 
+    font-weight: 500;
+}
+.article-card p {
+    font-size: 0.9rem;
+    line-height: 1.3; 
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.04 ;
+}
+.article-card a {
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;       
+    color: #101010;       
+}
+.article-card a:hover {
+    color: #e7c000;  
+    text-decoration: underline; 
+}
+#site-footer {
+    position: relative; 
+    padding: 3vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #101010;
+}
+@media (max-width: 900px) {
+    .article-card {
+        min-width: 320px;
+        max-width: 320px;
+    }
+
+    .articles-scroll:hover {
+        transform: translateX(-200px);
+    }
+}
+@media (max-width: 600px) {
+    .articles-scroll {
+        overflow-x: auto;
+        transform: none;
+    }
+    .articles-scroll:hover {
+        transform: none;
+    }
+}

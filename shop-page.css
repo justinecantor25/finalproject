@@ -1,0 +1,156 @@
+#site-header {
+    font-family: "Helvetica", serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1.5vh 3vw;
+}
+#main-nav {
+    position: static; 
+    z-index: 2000;
+}
+#main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2vw;
+    margin: 0;
+    padding: 0;
+}
+#main-nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+#main-nav ul li a:hover {
+    color: #e7c000;
+}
+.site-logo {
+    height: 6vh;
+    width: auto;
+}
+.shop-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Helvetica", serif;
+    display: flex;
+    flex-direction: column;
+}
+.shop-title {
+    font-family: "Georgia", serif;
+    padding:15vh 2rem 15rem 2rem;
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 4rem;
+    border-bottom: 0.1rem solid #000000;
+    padding-bottom: 1rem;
+}
+.shop-grid {
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    align-items: start;
+    gap: 2rem;
+}
+.shop-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 0;
+}
+.shop-item img {
+    width: 100%;
+    max-height: 40vh;  
+    object-fit: contain; 
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+.shop-item:hover img {
+    transform: scale(1.05);
+}
+.shop-item h1 {
+    font-weight: 400;
+    font-size: 0.7rem;
+    margin-bottom: 0;
+    color: #858585;
+}
+.shop-item h2.issue-title {
+    font-family: "Georgia", serif;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 0;
+}
+.shop-item p {
+    font-family: "Georgia", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+.shop-item a {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+}
+.shop-item a:hover {
+    color: #e7c000;
+}
+.shop-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+.shop-pagination a {
+    font-family: "Helvetica", sans-serif;
+    text-decoration: none;
+    color: #262626;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ffffff;
+    transition: all 0.3s ease;
+}
+.shop-pagination a.active {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #262626;
+}
+#site-footer {
+    position: relative; 
+    padding: 2vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #000000;
+}
+@media (max-width: 900px) {
+    .shop-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .shop-page {
+        padding: 2rem 1rem;
+    }
+
+    .shop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-title {
+        font-size: 2rem;
+    }
+}
